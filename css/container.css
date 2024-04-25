@@ -1,0 +1,257 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/*방명록*/
+
+.container .box1>p {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  /* display: inline-block; */
+  text-decoration: underline;
+}
+
+.container .box1 {
+  width: 100%;
+  height: 80vh;
+  text-align: center;
+  border: 2px solid black;
+  padding: 20px;
+  margin: 0 auto 20px;
+  overflow-y: auto;
+  position: relative;
+}
+
+/*방명록 박스*/
+
+.container .box2 {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  /* margin-left: auto;
+  margin-top: -4px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+
+/*방명록 박스 안 모달기능 할 +버튼*/
+
+.container .box2 .plus {
+  font-size: 36px;
+}
+
+/*+*/
+
+.container .additionalboxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/*방명록 내용이 들어갈 박스들*/
+
+@media (max-width: 600px) {
+  .container .guestbox {
+    width: 80%;
+    background-color: #98a191;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 5% 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+}
+
+@media (min-width: 600px) {
+  .container .guestbox {
+    width: 40%;
+    background-color: #98a191;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 5% 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+}
+
+/*방명록 내용이 들어갈 박스*/
+.container .guestbox .title {
+  display: flex;
+  flex: row;
+  width: 100%;
+  align-items: center;
+}
+
+.container .guestbox p {
+  font-size: 20px;
+}
+
+.container .guestbox .title .action {
+  margin-left: auto;
+}
+
+/*방명록 글쓴이*/
+
+.container .guestbox .edit,
+.container .guestbox .delete {
+  display: inline-block;
+  background-color: #bec9b6;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 3px;
+}
+
+/*방명록 수정, 삭제 버튼*/
+
+.container .guestboxbox {
+  flex: 1;
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #bec9b6;
+  border-radius: 10px;
+}
+
+/*방명록 박스 안에 들어갈 내용 박스*/
+
+.container .guestbox .guestboxbox .guestcontent {
+  text-align: left;
+  justify-content: flex-start;
+  font-size: 20px;
+  margin: 0;
+  word-wrap: break-word;
+}
+
+/*방명록 박스 안에 들어갈 내용*/
+
+.container .box1 .modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+
+.container .box1 .modal .modalcontent {
+  background-color: #98a191;
+  margin: 15% auto;
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 80%;
+  position: relative;
+}
+
+.container .box1 .modal .modalcontent .close {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 0rem;
+  right: 1rem;
+}
+
+.container .box1 .modal .modalcontent .close:hover,
+.container .box1 .modal .modalcontent .close:focus {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button[type="submit"] {
+  flex: 1;
+  width: 40%;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #bec9b6;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+.container .box1 .modal .modalcontent label[for="userId"],
+.container .box1 .modal .modalcontent label[for="content"] {
+  font-size: 20px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.container .box1 .modal .modalcontent .userId,
+.container .box1 .modal .modalcontent .content {
+  font-size: 20px;
+  padding: auto;
+  width: 40%;
+  border: 2px solid black;
+}
+
+
+
+/* 수정 모달 */
+.editmodal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+
+.editmodalcontent {
+  background-color: #98a191;
+  margin: 15% auto;
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 80%;
+  position: relative;
+}
+
+.closeeditmodal {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 0rem;
+  right: 1rem;
+}
+
+.closeeditmodal:hover,
+.closeeditmodal:focus {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.editmodalcontent label[for="edituserId"],
+.editmodalcontent label[for="editcontent"] {
+  font-size: 20px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.editmodalcontent .edituserId,
+.editmodalcontent .editcontent {
+  font-size: 20px;
+  padding: auto;
+  width: 40%;
+  border: 2px solid black;
+}

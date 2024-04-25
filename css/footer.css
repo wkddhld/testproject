@@ -1,0 +1,70 @@
+footer {
+  background-color: #eee;
+  color: var(--footer-color);
+  padding: 1.4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 12rem;
+}
+
+footer .team-introduction {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+footer .team-introduction>* {
+  margin-right: 4px;
+  font-size: 1.4rem;
+}
+
+footer .team-introduction button {
+  background-color: #ffdc00;
+  padding: 0.2rem;
+  border-radius: 0.2rem;
+  font-size: 1rem;
+}
+
+footer .members {
+  font-size: 0.8rem;
+  /* height: 8rem; */
+  margin: 0.2rem 0;
+}
+
+footer .members .member {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0.2rem;
+}
+
+footer .members .member:nth-last-child(1) {
+  margin: 0;
+}
+
+footer .members .member>* {
+  margin-right: 0.2rem;
+}
+
+footer .members .member button {
+  cursor: default;
+  font-size: 0.6rem;
+}
+
+@media (min-width: 600px) {
+  footer .team-introduction>* {
+    font-size: 2rem;
+  }
+
+  footer .team-introduction button {
+    font-size: 1.4rem;
+  }
+
+  footer .members {
+    font-size: 1rem;
+  }
+
+  footer .members .member button {
+    font-size: 0.8rem;
+  }
+}

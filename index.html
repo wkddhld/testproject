@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+
+<body>
+  <header>
+    <img src="./image/newJs.png" alt="js icon" />
+    <nav>
+      <ul>
+        <li class="active">
+          <a href="#Home">Home</a>
+        </li>
+        <li><a href="#introduction">About</a></li>
+        <li><a href="#profile">Biography</a></li>
+        <li><a href="#des">Career</a></li>
+        <li><a href="#container">Guest</a></li>
+        <span class="animation"></span>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="Home">
+    <ul class="slider">
+      <p id="arrow" class="left">〈</p>
+      <li class="active">
+        <img src="./image/eich2.PNG" alt="eich image 1" />
+      </li>
+      <li><img src="./image/eich3.PNG" alt="eich image 2" /></li>
+      <div class="dot-list">
+        <p id="dot" class="active"></p>
+        <p id="dot"></p>
+        <p id="dot"></p>
+      </div>
+      <div class="content">
+
+        <h3>자바스크립트의 아버지,</h3>
+        <p>Brendan Eich에 대해 알아봅시다.</p>
+      </div>
+      <p id="arrow" class="right">〉</p>
+    </ul>
+  </main>
+
+  <div id="introduction">
+    <section class="introduction">
+      <!-- 아이크씨 얼굴사진 -->
+      <img class="first_picture" src="./image/eich1.PNG" alt="아이크1" />
+
+      <article>
+        <div class="name">
+          <h1>Brendan Eich</h1>
+          <h2>브래든 아이크</h2>
+        </div>
+        <!-- 사진밑에 간단한 소개글 -->
+        <div class="simpleintro">
+          <h2>1961년 7월 4일생</h2>
+          <h2>자바스크립트 창시</h2>
+          <h2>브라이 브레이즈 브라우저 CEO</h2>
+        </div>
+      </article>
+
+      <div class="bottom_imagegroup" id="iconContainer"></div>
+
+    </section>
+  </div>
+
+
+  <section id="profile">
+    <div class="first">
+      <div class="first year">
+        <p>1964</p>
+        <p>1983</p>
+      </div>
+      <div class="first graph">
+        <div class="circle">
+          <p class="YearTri hidden"></p>
+          <p class="YearDes hidden">미국 펜실베니아 주<br />피츠버그 출생</p>
+        </div>
+        <div class="circle">
+          <p class="YearTri hidden"></p>
+          <p class="YearDes hidden">
+            미국 산타 클라라 대학교<br />
+            수학 컴퓨터 공학 전공
+          </p>
+        </div>
+        <div class="circle">
+          <p class="YearTri hidden"></p>
+          <p class="YearDes hidden">
+            미국 일리노이 대학교<br />
+            컴퓨터 공학 석사
+          </p>
+        </div>
+        <div class="line"></div>
+      </div>
+      <p class="first p">1979</p>
+    </div>
+    <div class="second">
+      <div class="second year">
+        <p>1995</p>
+        <p>1985</p>
+      </div>
+      <div class="second graph">
+        <div class="second__circle">
+          <p class="secondYearTri hidden"></p>
+          <p class="secondYearDes hidden">
+            Silicon Graphics<br />소프트웨어 엔지니어
+          </p>
+        </div>
+        <div class="second__circle">
+          <p class="secondYearTri hidden"></p>
+          <p class="secondYearDes hidden">
+            MicroUnity<br />소프트웨어 엔지니어
+          </p>
+        </div>
+        <div class="second__circle">
+          <p class="secondYearTri hidden"></p>
+          <p class="secondYearDes hidden">
+            Netscape 수석 엔지니어 및<br />치프 아키텍트 엔지니어
+          </p>
+        </div>
+        <div class="second__line"></div>
+      </div>
+      <p class="second p">1992</p>
+    </div>
+    <div class="third">
+      <div class="third year">
+        <p>2003</p>
+        <p>~</p>
+      </div>
+      <div class="third graph">
+        <div class="circle">
+          <p class="YearTri hidden"></p>
+          <p class="YearDes hidden">모질라 CTO 및 CEO</p>
+        </div>
+        <div class="circle">
+          <p class="YearTri hidden"></p>
+          <p class="YearDes hidden">브레이브 소프트웨어 CEO</p>
+        </div>
+        <div class="circle"></div>
+        <div class="line"></div>
+      </div>
+      <p class="third p">2005</p>
+    </div>
+  </section>
+  <section id="des">
+    <article>
+      <div class="title">
+        <h2>JavaScript</h2>
+      </div>
+      <div class="detail">
+        <img src="./image/js_icon.png" alt="js_icon" />
+        <div>
+          <button id="jsToggleBtn">
+            <i class="fa-solid fa-caret-right"></i>
+          </button>
+          <p>JavaScript란?</p>
+        </div>
+        <!-- <span class="programLang">Python</span>
+          <p class="programLang">C</p>
+          <p class="programLang">C++</p>
+          <p class="programLang">Java</p>
+          <p class="programLang">C#</p>
+          <p class="programLang">JavaScript</p>
+          <p class="programLang">Go</p>
+          <p class="programLang">Visual Basic</p>
+          <p class="programLang">SQL</p>
+          <p class="programLang">Fortran</p> -->
+        <div class="pieChart hidden">
+          <canvas id="myChart"></canvas>
+        </div>
+
+        <p class="content hidden">
+          프론트엔드의 <strong>동적</strong>인 요소 추가<br />
+          사용자의 입력에 대한 처리 담당<strong>(이벤트 처리)</strong>
+          <br />백엔드와 데이터 주고 받음<br />
+          사용자의 액션에 따라, 특정 이벤트에 따라 웹 페이지가 바뀌도록 수정
+          <br />어느 브라우저에서나 동작, 즉 별도의 설치 없이도
+          <strong>브라우저만 있다면 사용 가능</strong>
+          <br />
+        </p>
+      </div>
+    </article>
+    <article>
+      <div class="title">
+        <h2>Brave</h2>
+      </div>
+      <div class="detail">
+        <img src="./image/brave_brower.png" alt="brave_browser_img" />
+        <div>
+          <button id="braveToggleBtn">
+            <i class="fa-solid fa-caret-right"></i>
+          </button>
+          <p>Brave란?</p>
+        </div>
+        <p class="content hidden">설명</p>
+      </div>
+    </article>
+    <article>
+      <div class="title">
+        <h2>Mozilla</h2>
+      </div>
+      <div class="detail">
+        <img src="./image/mozilla.png" alt="mozilla_img" />
+        <div>
+          <button id="mozillaToggleBtn">
+            <i class="fa-solid fa-caret-right"></i>
+          </button>
+          <p>Mozilla란?</p>
+        </div>
+        <p class="content hidden">설명</p>
+      </div>
+    </article>
+  </section>
+  <section class="container" id="container">
+    <div class="box1">
+      <p>방명록</p>
+      <button class="box2">
+        <i class="fa-solid fa-plus"></i>
+      </button>
+
+      <div class="modal">
+        <div class="modalcontent">
+          <span class="close">&times;</span>
+          <form class="modalForm">
+            <label for="userId">이름</label>
+            <input type="text" class="userId" name="userId" required maxlength="7" /><br /><br />
+            <label for="content">내용</label>
+            <textarea class="content" name="content" required maxlength="50"></textarea><br /><br />
+            <button type="submit">등록</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="editmodal">
+        <div class="editmodalcontent">
+          <span class="closeeditmodal">&times;</span>
+          <form class="editmodalform">
+            <label for="edituserId">이름</label>
+            <input type="text" class="edituserId" name="edituserId" required><br><br>
+            <label for="editcontent">내용</label>
+            <textarea class="editcontent" name="editcontent" required></textarea><br><br>
+            <button type="submit">수정</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="additionalboxes"></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="team-introduction">
+      <h1>1팀</h1>
+      <p>Developers</p>
+      <button><i class="fa-solid fa-comments"></i></button>
+    </div>
+    <div class="members" id="members-container">
+
+    </div>
+  </footer>
+
+  <!-- 페이지업-->
+  <button class="scroll-button" onclick="scrollToTop()">
+    <i class="fa-solid fa-circle-arrow-up"></i>
+  </button>
+
+  <!-- 페이지 다운 -->
+  <!-- <button class="scroll-button" onclick="scrollToBottom()">↡</button> -->
+  <div style="height: auoto"></div>
+  <!-- 파이 차트(chart.js 라이브러리 사용) -->
+
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+  <script>
+    const ctx = document.querySelector("#myChart").getContext("2d");
+    const myChart = new Chart(ctx, {
+      type: "pie", // 파이 차트 설정
+      data: {
+        labels: [
+          "Python",
+          "C",
+          "C++",
+          "Java",
+          "C#",
+          "JavaScript",
+          "Go",
+          "etc",
+        ],
+        datasets: [
+          {
+            data: [96, 60, 58, 54, 41, 18, 11, 22],
+            backgroundColor: [
+              "red", // Python
+              "orange", // C
+              "yellow", // C++
+              "lightgreen", // Java
+              "green", // C#
+              "aqua", // JavaScript
+              "blue", // Go
+              "lightgray", // etc
+            ],
+            borderWidth: 0.5,
+          },
+        ],
+      },
+      options: {
+        plugins: {
+          title: {
+            // title 보이도록 코드 작성
+            display: true,
+            text: "가장 인기있는 프로그래밍 언어 Top 7",
+          },
+          legend: {
+            // 라벨들 보이지 않게 코드 작성
+            display: false,
+          },
+        },
+        animation: {
+          duration: 2000,
+          easing: "easeInOutQuad",
+          //애니메이션 회전효과
+          animateRotate: true,
+        },
+      },
+    });
+
+  </script>
+  <script src="js/profile.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/updown.js"></script>
+  <script src="js/container.js"></script>
+  <script src="icondata.js"></script>
+  <script src="footmember.js"></script>
+</body>
+
+</html>

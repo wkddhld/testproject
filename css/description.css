@@ -1,0 +1,167 @@
+/* js, brave, mozilla 내용 section */
+#des {
+  /* 넓이를 border 포함한 넓이로 설정 */
+  box-sizing: border-box;
+  min-width: 340px;
+  padding: 10px 15px 10px 15px;
+}
+#des article {
+  width: 100%;
+  min-height: 130px;
+}
+.title {
+  min-height: 30px;
+  font-size: 1.4rem;
+}
+
+/* 이미지와 설명 글 담고 있는 div 태그 */
+.detail {
+  text-align: center;
+  /* 글자 및 이미지 가운데 정렬 */
+  padding-top: 10px;
+  font-size: 1.2rem;
+  min-height: 100px;
+  position: relative;
+}
+
+.detail img {
+  width: 60px;
+  height: 60px;
+}
+
+/* 토글 버튼과 부제목 담고 있는 div 태그 */
+.detail div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  height: 20px;
+}
+
+/* 토글 버튼들 */
+.detail button {
+  display: inline-block;
+  margin-right: 3px;
+  margin-top: 1.5px;
+  width: 13.5px;
+  height: 13.5px;
+  /* 아이콘 색깔 설정 */
+  color: var(--circle-color);
+  /* 버튼 배경색 투명으로 설정 */
+  background-color: transparent;
+}
+
+/* 원형 차트 */
+/* .detail .pieChart {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  margin: 15px auto;
+  background: conic-gradient(
+    red 96deg,
+    orange 96deg 156deg,
+    yellow 156deg 214deg,
+    lightgreen 214deg 268deg,
+    green 268deg 309deg,
+    aqua 309deg 327deg,
+    blue 327deg 338deg,
+    lightgray 338deg
+  );
+} */
+/* 파이 차트 가운데 정렬 */
+.detail .pieChart {
+  width: 150px;
+  height: auto;
+  margin: 15px auto;
+}
+
+/* js, brave, mozilla 설명 css 코드 */
+.detail .content {
+  line-height: 20px;
+  text-align: start;
+  padding-left: 10px;
+  height: 150px;
+  overflow: scroll;
+  margin-bottom: 15px;
+}
+/* 토글 기능 구현 시 사용할 class: hidden, toggle */
+/* 설명란 안 보이도록 하는 class */
+.hidden {
+  /* !important 사용하여 우선순위 높임(무조건 먼저 적용됨) */
+  display: none !important;
+}
+
+/* 삼각형 모양 버튼 눌렀을 때, 90도 회전 */
+.toggle {
+  transform: rotate(90deg);
+}
+
+/* 태블릿 환경일 때 */
+@media (min-width: 600px) {
+  .title {
+    font-size: 20px;
+    /* height: 50px; */
+  }
+
+  .detail {
+    padding-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .detail p {
+    font-size: 25px;
+  }
+
+  .detail img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .detail div {
+    height: 40px;
+  }
+
+  .detail button {
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    margin-top: 8px;
+  }
+
+  .detail .content {
+    font-size: 15px;
+    line-height: 25px;
+  }
+}
+
+/* 데스크탑 환경일 때 */
+@media (min-width: 1024px) {
+  #des {
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  /* 같은 넓이 배분하고자 width: 33.3333로 설정*/
+  #des article {
+    width: 33.3333%;
+  }
+  /* 타이틀 가운데 정렬 */
+  .title {
+    text-align: center;
+    font-size: 35px;
+    /* height: 80px; */
+  }
+  .detail {
+    font-size: 50px;
+  }
+  .detail img {
+    width: 150px;
+    height: 150px;
+  }
+  .detail .content {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
